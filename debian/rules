@@ -1,4 +1,35 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+include /usr/share/ocaml/ocamlvars.mk
 
 %:
-	dh $@
+	dh $@ --with ocaml --buildsystem ocaml_dune
+
+override_dh_auto_build:
+	rm -f compiler/tests-jsoo/dune         # makes the build fail on amd64
+	rm -f compiler/lib-runtime/tests/dune  # makes the build fail on bytecode architectures
+ifeq ($(OCAML_HAVE_OCAMLOPT),no)
+	sed -i 's/ native//' compiler/bin-js_of_ocaml/dune
+endif
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) doc
+endif
+	dh_auto_build
+
+override_dh_auto_test:
+# Needs ppx-expect, ppx-hash, node, Uchar.utf_decode...
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/libjs-of-ocaml-doc/usr/share/doc/libjs-of-ocaml-doc
+	rm -rf debian/libjs-of-ocaml-doc/usr/share/doc/libjs-of-ocaml-doc/api
+	rm -rf debian/libjs-of-ocaml-doc/usr/share/doc/libjs-of-ocaml-doc/manual
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+	cp -a doc-dev/api debian/libjs-of-ocaml-doc/usr/share/doc/libjs-of-ocaml-doc/api
+	cp -a doc-dev/manual debian/libjs-of-ocaml-doc/usr/share/doc/libjs-of-ocaml-doc/manual
+	find debian/libjs-of-ocaml-doc -type f -empty -delete
+	sed -i \
+	  's@href=".*//maxcdn\.bootstrapcdn\.com/bootstrap.*/bootstrap\.min\.css"@href="file:///usr/share/javascript/bootstrap/css/bootstrap.min.css"@g' \
+	  debian/libjs-of-ocaml-doc/usr/share/doc/libjs-of-ocaml-doc/manual/files/toplevel/index.html
+endif

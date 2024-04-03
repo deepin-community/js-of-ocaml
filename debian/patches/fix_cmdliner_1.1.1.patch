@@ -1,0 +1,15 @@
+Author: Julien Puydt
+Description: make the build work wit cmdliner 1.1.1
+Forwarded: no
+
+--- js-of-ocaml.orig/Makefile
++++ js-of-ocaml/Makefile
+@@ -12,7 +12,7 @@
+ 	dune clean
+ 	dune build @doc --cache=disabled --force
+ 	rsync -av --delete _build/default/_doc/_html/ doc-dev/api
+-	dune build @doc-manual --cache=disabled --force
++	dune build @doc-manual --cache=disabled --force --profile=release
+ 	rsync -av --delete --exclude=".*" _build/default/manual/ doc-dev/manual
+ 	find doc-dev/ -name dune -delete
+ 	find doc-dev/ -name "*.exe" -delete

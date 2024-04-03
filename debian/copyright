@@ -1,22 +1,89 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Packaged-By: Stéphane Glondu <glondu@debian.org>
+Packaged-Date: Sun, 23 Jan 2011 09:40:34 +0100
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Copyright: 2010, Jérôme Vouillon and contributors
+           2010, PPS, CNRS, Université Paris Diderot
+License: LGPL-2.1+
+
+Files: lib/*
+Copyright: 2010, Jérôme Vouillon, PPS, CNRS, Université Paris Diderot
+License: LGPL-2-exception
+
+Files: runtime/*
+Copyright: 2010, Jérôme Vouillon and contributors
+           2010, PPS, CNRS, Université Paris Diderot
+           1996, INRIA
+License: LGPL-2-exception
+
+Files: tools/*
+Copyright: 2001, INRIA
+License: QPL-exception
+ The software is distributed under the terms of the Q Public License
+ version 1.0 with a change to choice of law. The full text can be
+ found in `/usr/share/doc/ocaml-base-nox/copyright', in ocaml-base-nox
+ package (a dependency of this one).
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ As a special exception to the Q Public Licence, you may develop
+ application programs, reusable components and other software items
+ that link with the original or modified versions of the software and
+ are not made available to the general public, without any of the
+ additional requirements listed in clause 6c of the Q Public licence.
+
+Files: examples/boulderdash/* examples/minesweeper/*
+Copyright: 2007-2009, Benjamin Canou
+License: WTFPL
+ These examples were taken from obrowser and adapted to
+ Js_of_ocaml. You are free to use them under the terms of the Do What
+ The Fuck You Want Public License.
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ Copyright (C) 2004 Sam Hocevar
+  14 rue de Plaisance, 75014 Paris, France
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
+ .
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+ .
+ 0. You just DO WHAT THE FUCK YOU WANT TO.
+
+Files: debian/*
+Copyright: 2011, Stéphane Glondu <glondu@debian.org>
+License: LGPL-2.1+
+
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation, with linking exception;
+ either version 2.1 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details. On Debian systems,
+ the full text can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: LGPL-2-exception
+ This Library is distributed under the terms of the GNU Library
+ General Public License version 2. On Debian systems, the full text
+ can be found in `/usr/share/common-licenses/LGPL-2'.
+ .
+ As a special exception to the GNU Library General Public License, you
+ may link, statically or dynamically, a "work that uses the Library"
+ with a publicly distributed version of the Library to produce an
+ executable file containing portions of the Library, and distribute
+ that executable file under terms of your choice, without any of the
+ additional requirements listed in clause 6 of the GNU Library General
+ Public License.  By "a publicly distributed version of the Library",
+ we mean either the unmodified Library as distributed by INRIA, or a
+ modified version of the Library that is distributed under the
+ conditions defined in clause 2 of the GNU Library General Public
+ License.  This exception does not however invalidate any other
+ reasons why the executable file might be covered by the GNU Library
+ General Public License.
