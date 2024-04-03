@@ -1,5 +1,306 @@
-template-repository (1.0-1) unstable; urgency=medium
+js-of-ocaml (5.6.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 18 Feb 2024 11:23:53 +0100
+
+js-of-ocaml (5.4.0-2) unstable; urgency=medium
+
+  * Use ocaml_dune DH buildsystem
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 07 Aug 2023 05:22:37 +0200
+
+js-of-ocaml (5.4.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 22 Jul 2023 10:58:13 +0200
+
+js-of-ocaml (5.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Fix d/watch.
+  * Bump standards-version to 4.6.2.
+  * Document patches better.
+  * New upstream release.
+  * Fix compilation with recent dune
+  * Add missing depend on sedlex
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 05 Jul 2023 10:17:24 +0200
+
+js-of-ocaml (4.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch for cmdliner 1.1.1 support.
+  * Clean empty files.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 29 Jun 2022 10:11:01 +0200
+
+js-of-ocaml (4.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Build doc
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 02 Mar 2022 13:40:49 +0100
+
+js-of-ocaml (3.11.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Do not build doc to bootstrap with OCaml 4.13.1
+  * Bump Standards-Version to 4.6.0
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 21 Jan 2022 11:30:21 +0100
+
+js-of-ocaml (3.8.0-2) unstable; urgency=medium
+
+  * Properly build libjs-of-ocaml-doc (Closes: #987458)
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 25 Apr 2021 17:44:21 +0200
+
+js-of-ocaml (3.8.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.5.1
+  * Add "Multi-Arch: foreign" to libjs-of-ocaml-doc
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 05 Dec 2020 14:39:31 +0100
+
+js-of-ocaml (3.7.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 08 Nov 2020 05:36:03 +0100
+
+js-of-ocaml (3.7.0-3) unstable; urgency=medium
+
+  * Add libgraphics-ocaml-dev to Build-Depends
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 14 Oct 2020 14:58:07 +0200
+
+js-of-ocaml (3.7.0-2) unstable; urgency=medium
+
+  * Fix compilation on bytecode architectures
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 22 Aug 2020 21:17:47 +0200
+
+js-of-ocaml (3.7.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 22 Aug 2020 19:50:03 +0200
+
+js-of-ocaml (3.6.0-2) unstable; urgency=medium
+
+  * Fix FTBFS on bytecode architectures
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 29 Jul 2020 14:35:34 +0200
+
+js-of-ocaml (3.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump debhelper compat level to 13
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 29 Jul 2020 10:12:17 +0200
+
+js-of-ocaml (3.5.2-3) unstable; urgency=medium
+
+  * Avoid an unfortunate wildcard that was installing the same file in
+    libjs-of-ocaml and in libjs-of-ocaml-dev, causing failure of their
+    installation
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 14 Feb 2020 09:51:30 +0100
+
+js-of-ocaml (3.5.2-2) unstable; urgency=medium
+
+  * Fix FTBFS on bytecode architectures
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 11 Feb 2020 12:53:39 +0100
+
+js-of-ocaml (3.5.2-1) unstable; urgency=medium
+
+  [ Stéphane Glondu ]
+  * New upstream release (Closes: #878469)
+  * Update debian/watch
+  * Update Vcs-*
+  * Bump debhelper compat level to 12
+  * Bump Standards-Version to 4.5.0
+  * Add Rules-Requires-Root: no
+
+  [ Nicolas Dandrimont ]
+  * d/control: remove myself from Uploaders
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 11 Feb 2020 09:45:15 +0100
+
+js-of-ocaml (2.5-2) unstable; urgency=medium
+
+  * Build with reactiveData and tyxml support
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 06 Nov 2015 16:10:18 +0100
+
+js-of-ocaml (2.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Remove 0001-Fix-generation-of-compiler.cm.patch, integrated upstream.
+    - Refresh remaining patch
+    - Add libcmdliner-ocaml-dev and libfindlib-ocaml-dev to Build-Depends.
+  * Fix install target
+  * Install logger.cma and jsooTop.cmo in libjs-of-ocaml
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sun, 18 Oct 2015 10:41:57 +0200
+
+js-of-ocaml (2.2-2) unstable; urgency=medium
+
+  * Fix FTBFS on bytecode architectures
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 18 Jun 2014 12:59:58 +0200
+
+js-of-ocaml (2.2-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #751693)
+  * debian/patches:
+    + Fix generation of compiler.cm*
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 17 Jun 2014 11:45:02 +0200
+
+js-of-ocaml (1.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Vcs-*
+  * Bump Standards-Version to 3.9.5 (no changes)
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 27 Dec 2013 20:20:21 +0100
+
+js-of-ocaml (1.3.2-4) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 07 Dec 2013 10:42:24 +0100
+
+js-of-ocaml (1.3.2-3) experimental; urgency=low
+
+  * Compile with OCaml >= 4.01
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 11 Nov 2013 08:00:20 +0100
+
+js-of-ocaml (1.3.2-2) unstable; urgency=low
+
+  [ Nicolas Dandrimont ]
+  * Add a manpage for js_of_ocaml
+
+  [ Stéphane Glondu ]
+  * Use format version 1.0 in debian/copyright
+  * Bump Standards-Version to 3.9.4
+  * Upload to unstable
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 10 May 2013 11:14:25 +0200
+
+js-of-ocaml (1.3.2-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 07 Dec 2012 20:52:08 +0100
+
+js-of-ocaml (1.3.1-1) experimental; urgency=low
+
+  * New upstream release
+    - bump build-dependency to lwt
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 07 Dec 2012 17:50:36 +0100
+
+js-of-ocaml (1.2-2) unstable; urgency=low
+
+  * Update upstream changelog and version (Closes: #691257)
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 14 Nov 2012 12:18:20 +0100
+
+js-of-ocaml (1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 08 Jun 2012 07:23:02 +0200
+
+js-of-ocaml (1.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 17 Mar 2012 11:39:42 +0100
+
+js-of-ocaml (1.1-1) unstable; urgency=low
+
+  * New upstream release
+    - remove patch (merged upstream)
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 04 Mar 2012 20:30:02 +0100
+
+js-of-ocaml (1.0.9b-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/watch
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 01 Jan 2012 15:01:11 +0100
+
+js-of-ocaml (1.0.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix FTBFS on bytecode architectures
+  * Do not install plugins on architectures without natdynlink
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 03 Dec 2011 13:43:57 +0100
+
+js-of-ocaml (1.0.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Add libderiving-ocsigen-ocaml-dev to Build-Depends
+  * Add new binary packages: js-of-ocaml, libjs-of-ocaml
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 29 Nov 2011 07:46:26 +0100
+
+js-of-ocaml (1.0.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 22 Nov 2011 07:12:18 +0100
+
+js-of-ocaml (1.0.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 29 Sep 2011 08:43:35 +0200
+
+js-of-ocaml (1.0.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 22 Sep 2011 11:53:08 +0200
+
+js-of-ocaml (1.0.3-1) unstable; urgency=low
+
+  * New upstream release
+    - do no longer remove examples, update debian/copyright accordingly
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 30 Jul 2011 18:31:12 +0200
+
+js-of-ocaml (1.0.2+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - Bump required Lwt version to 2.3.0
+    - Update license to LGPLv2
+    - Drop patches (fixed upstream)
+  * Bump Standards-Version to 3.9.2 (no changes)
+
+ -- Nicolas Dandrimont <nicolas.dandrimont@crans.org>  Fri, 20 May 2011 00:33:08 +0200
+
+js-of-ocaml (1.0+dfsg-2) unstable; urgency=low
+
+  * Team upload.
+  * Do not compile native js_of_ocaml on bytecode architectures, use bytecode
+    version instead.
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sat, 23 Apr 2011 13:39:26 +0200
+
+js-of-ocaml (1.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #610392)
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 23 Jan 2011 12:40:04 +0100

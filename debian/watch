@@ -1,0 +1,4 @@
+version=4
+opts="searchmode=plain" \
+https://api.github.com/repos/ocsigen/js_of_ocaml/releases?per_page=50 \
+https://github.com/ocsigen/js_of_ocaml/releases/download/[^/]+/js_of_ocaml-v?@ANY_VERSION@\.tbz

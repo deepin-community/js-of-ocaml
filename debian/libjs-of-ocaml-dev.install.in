@@ -1,0 +1,17 @@
+@OCamlStdlibDir@/*/*opam*
+@OCamlStdlibDir@/*/*dune*
+@OCamlStdlibDir@/*/*.js
+@OCamlStdlibDir@/*/*.a
+@OCamlStdlibDir@/*/*.cmi
+@OCamlStdlibDir@/*/*.cmt*
+@OCamlStdlibDir@/*/*.ml*
+@OCamlStdlibDir@/*/ppx.exe
+@OCamlStdlibDir@/*/ppx_js
+OPT: @OCamlStdlibDir@/*/*.cmx
+OPT: @OCamlStdlibDir@/*/*.cmxa
+@OCamlStdlibDir@/*/*/*.cmi
+@OCamlStdlibDir@/*/*/*.cmt*
+@OCamlStdlibDir@/*/*/*.ml*
+@OCamlStdlibDir@/*/*/*.a
+OPT: @OCamlStdlibDir@/*/*/*.cmx
+OPT: @OCamlStdlibDir@/*/*/*.cmxa
